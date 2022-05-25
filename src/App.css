@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  /* background-color: rebeccapurple; */
 }
 
 .App-logo {
@@ -16,7 +17,7 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -32,7 +33,93 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+#InputName {
+  width: 15rem;
+  height: 45px;
+  display: flex;
+}
+
+#InputEmail {
+  width: 15rem;
+  height: 45px;
+  display: flex;
+}
+
+#InputAddress {
+  width: 15rem;
+  height: 45px;
+  display: flex;
+}
+
+.form {
+  background-color: #dcdcdc;
+  width: 20rem;
+  /* height: 30rem; */
+  padding-left: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 2rem 2rem;
+  /* text-align: center; */
+}
+
+.btn {
+  border: 5px solid white;
+  font-weight: 800;
+  background-color: #282c34;
+  border-radius: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  width: 10rem;
+  height: 55px;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+  border: 5px solid black;
+  font-weight: 800;
+}
+#output {
+  height: 10rem;
+  width: 20rem;
+  background-color: #dcdcdc;
+}
+.Display-Users {
+  width: 22rem;
+  /* height: 10rem; */
+  background-color: #dcdcdc;
+  text-align: center;
+  /* margin-left: 29rem; */
+  display: inline-block;
+  border: 1px solid black;
+  /* padding: 1rem 1rem; */
+  vertical-align: left;
+}
+.Display-Users li{
+  list-style-type: none;
+  text-align: center;
+  /* text-decoration: dotted; */
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  font-display: auto;
+  text-align: center;
+  align-items: center;
+  /* text-decoration: underline; */
+  display: flex;
+  /* text-decoration: underline; */
+  background-color: white;
 }
