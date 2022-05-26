@@ -3,7 +3,8 @@
   background-color: rebeccapurple;
 }
 body{
-  background-color: rgb(204, 255, 255);
+  /* background-color: rgb(204, 255, 255); */
+  background-color: darkred ;
 }
 
 .App-logo {
@@ -61,17 +62,18 @@ body{
 }
 
 .form {
-  background-color: #dcdcdc;
+  /* background-color: #dcdcdc; */
+  background-color: darkcyan;
   width: 20rem;
   /* height: 30rem; */
   padding-left: 2rem;
   display: inline-block;
   vertical-align: middle;
-  border: 1px solid black;
+  border: 5px solid black ;
   margin: 1rem;
   padding: 2rem 2rem;
   /* text-align: center; */
-  display: inline-block;
+  /* display: inline-block; */
   margin-left: 10rem;
   position: absolute;
 }
@@ -105,11 +107,12 @@ body{
 .Display-Users {
   width: 22rem;
   /* height: 10rem; */
-  background-color: #dcdcdc;
+  /* background-color: #dcdcdc; */
+  background-color: darkcyan;
   text-align: center;
   /* margin-left: 29rem; */
   display: inline-block;
-  border: 2px solid black;
+  border: 5px solid black;
   padding: 2rem 2rem;
   margin: 2rem;
   margin-left: 63rem;

@@ -29,7 +29,7 @@ function App() {
         <form onSubmit={handleSubmit}>
         <h1>Add Users</h1>
         <label>
-          Name 
+         <b> Name </b> 
         </label>
         <input
           type="text"
@@ -41,7 +41,7 @@ function App() {
         />
         <br></br>
            <label>
-          Email 
+         <b>Email</b>  
         </label>
         <input
           type="text"
@@ -53,7 +53,7 @@ function App() {
         />
         <br></br>
            <label>
-          Address 
+          <b>Address </b>
         </label>
         <textarea
           type="text"
