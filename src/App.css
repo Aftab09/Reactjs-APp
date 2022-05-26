@@ -2,11 +2,6 @@
   /* text-align: center; */
   background-color: rebeccapurple;
 }
-body{
-  /* background-color: rgb(204, 255, 255); */
-  background-color: darkred ;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -63,7 +58,7 @@ body{
 
 .form {
   /* background-color: #dcdcdc; */
-  background-color: darkcyan;
+  background-color: #DCDCDC;
   width: 20rem;
   /* height: 30rem; */
   padding-left: 2rem;
@@ -108,7 +103,7 @@ body{
   width: 22rem;
   /* height: 10rem; */
   /* background-color: #dcdcdc; */
-  background-color: darkcyan;
+  background-color: #DCDCDC;
   text-align: center;
   /* margin-left: 29rem; */
   display: inline-block;
