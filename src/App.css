@@ -1,6 +1,9 @@
 .App {
   /* text-align: center; */
-  /* background-color: rebeccapurple; */
+  background-color: rebeccapurple;
+}
+body{
+  background-color: rgb(204, 255, 255);
 }
 
 .App-logo {
@@ -68,6 +71,9 @@
   margin: 1rem;
   padding: 2rem 2rem;
   /* text-align: center; */
+  display: inline-block;
+  margin-left: 10rem;
+  position: absolute;
 }
 
 .btn {
@@ -103,9 +109,15 @@
   text-align: center;
   /* margin-left: 29rem; */
   display: inline-block;
-  border: 1px solid black;
+  border: 2px solid black;
+  padding: 2rem 2rem;
+  margin: 2rem;
+  margin-left: 63rem;
+  /* margin-bottom: 5rem; */
+  /* padding: 2rem; */
   /* padding: 1rem 1rem; */
-  vertical-align: left;
+  /* vertical-align: left; */
+  position: absolute;
 }
 .Display-Users li{
   list-style-type: none;
