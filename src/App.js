@@ -25,7 +25,7 @@ function App() {
   // Delete User
   const handleDelete = (index) => {
     setList([
-      ...list.slice(0, index), 
+      ...list.slice(0, index),
       ...list.slice(index + 1)]);
   };
 
@@ -36,7 +36,7 @@ function App() {
     setEmail(list[index].email);
     setAddress(list[index].address);
     setList([
-      ...list.slice(0, index), 
+      ...list.slice(0, index),
       ...list.slice(index + 1)]);
   };
 
@@ -94,13 +94,13 @@ function App() {
               <li>Name: {item.name}</li>
               <li>Email: {item.email}</li>
               <li>Address: {item.address}</li>
-              <button type="button" className="" onClick={() => handleEdit(i)}>
+              <button type="button" className="btn" onClick={() => handleEdit(i)}>
                 Edit
-                
+
               </button>
               <button
                 type="button"
-                className="s"
+                className="btn"
                 onClick={() => handleDelete(i)}
               >
                 Delete
