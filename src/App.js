@@ -21,38 +21,16 @@ function App() {
     }
   };
 
-  // Delete Users
-  // const handleDelete = (index) => {
-  //   setList((ls) => {
-  //     const newList = ls.filter((item, i) => {
-  //       return i !== index;
-  //     });
-  //     return newList;
-  //   });
-  // }
 
-  // delete input data
-  // const [items, setItems] = useState(list);
+  // Delete User
   const handleDelete = (index) => {
     setList([
       ...list.slice(0, index), 
       ...list.slice(index + 1)]);
   };
 
-  // Edit Users
-  // const handleEdit = (index) => {
-  //   setName(list[index].name);
-  //   setEmail(list[index].email);
-  //   setAddress(list[index].address);
-  //   setList((ls) => {
-  //     const newList = ls.filter((item, i) => {
-  //       return i !== index;
-  //     });
-  //     return newList;
-  //   });
-  // };
 
-  // Edit input data
+  // Edit User
   const handleEdit = (index) => {
     setName(list[index].name);
     setEmail(list[index].email);
