@@ -6,6 +6,7 @@ function App() {
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
   const [list, setList] = useState([]);
+  // const [isEdit, setIsEdit] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,6 +19,8 @@ function App() {
       setName("");
       setEmail("");
       setAddress("");
+    } else{
+      alert("Please fill All fields*")
     }
   };
 
