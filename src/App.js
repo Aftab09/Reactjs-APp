@@ -1,51 +1,79 @@
 import "./App.css";
 import React, { useState } from "react";
+import Button from "@mui/material/Button";
+// import { DataGrid } from '@mui/x-data-grid';
 
 function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
   const [list, setList] = useState([]);
-  // const [isEdit, setIsEdit] = useState(false);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // console.log(name, email, address);
 
-    const DisplayInputData = { name, email, address };
+    const dupEmail = list.filter(list => list.email !== email).length
+    // console.log(dupEmail);
+    // console.log(list.length);
 
-    if (name && email && address) {
-      setList((ls) => [...ls, DisplayInputData]);
+    if (name !== "" && email !== "" && address !== "") {
+
+    if (dupEmail === list.length && email !== "") {
+      setList([...list, { name, email, address }]);
       setName("");
       setEmail("");
       setAddress("");
-    } else{
-      alert("Please fill All fields*")
+    }else{
+      alert(`${email}, Email is already Exist.`);
     }
+  
+  }else{
+    alert("Fill all fields");
+  }
+
+    e.preventDefault();
+    // console.log(name, email, address);
+
+    const DisplayInputData = {
+      name,
+      email,
+      address,
+    };
+
+    // if (name && email && address) {
+    //   setList((ls) => [...ls, DisplayInputData]);
+    //   setName("");
+    //   setEmail("");
+    //   setAddress("");
+    // } else {
+    //   alert("Please fill All fields*");
+    // }
+  };
+
+  // clear form data
+  const handleClear = () => {
+    setName("");
+    setEmail("");
+    setAddress("");
   };
 
 
   // Delete User
   const handleDelete = (index) => {
-    setList([
-      ...list.slice(0, index),
-      ...list.slice(index + 1)]);
+    setList([...list.slice(0, index), ...list.slice(index + 1)]);
   };
-
 
   // Edit User
   const handleEdit = (index) => {
     setName(list[index].name);
     setEmail(list[index].email);
     setAddress(list[index].address);
-    setList([
-      ...list.slice(0, index),
-      ...list.slice(index + 1)]);
+    setList([...list.slice(0, index), ...list.slice(index + 1)]);
   };
+
 
   return (
     <div className="App">
-      <div className="form">
+      <div className="card card-body">
         <form onSubmit={handleSubmit}>
           <h1>Add Users</h1>
           <label>
@@ -75,7 +103,7 @@ function App() {
           <label>
             <b>Address </b>
           </label>
-          <textarea
+          <input
             type="text"
             placeholder="Enter Address"
             value={address}
@@ -83,32 +111,51 @@ function App() {
             name="address"
             id="InputAddress"
           />
-          <button type="submit" className="btn">
+          <Button type="submit" id="btn" className="btn" variant="outlined">
             Submit
-          </button>
+          </Button>
+          <div>  
+         {/* <button onClick={showData}>Show</button> */}
+          </div>
         </form>
       </div>
-
-      <div className="Display-Users">
+      <div className="Display-Users" id="users">
         <h1>Display Users</h1>
+        <table border="1px solid black">
+          <th id="name">Name</th>
+          <th id="email">Email</th>
+          <th id="address">Address</th>
+          <th id="editDelete">Edit / Delete</th>
+        </table>
+
         {list.map((item, i) => (
           <div>
-            <ul className="list-group-item" key={i}>
-              <li>Name: {item.name}</li>
-              <li>Email: {item.email}</li>
-              <li>Address: {item.address}</li>
-              <button type="button" className="btn" onClick={() => handleEdit(i)}>
-                Edit
 
-              </button>
-              <button
-                type="button"
-                className="btn"
-                onClick={() => handleDelete(i)}
-              >
-                Delete
-              </button>
-            </ul>
+            <table border="1px solid black">
+
+              <tr className="list-group-item">
+                <td id="name">{item.name}</td>
+                <td id="email">{item.email}</td>
+                <td id="address">{item.address}</td>
+                <Button
+                  id="btn"
+                  variant="outlined"
+                  className="btn"
+                  onClick={() => handleEdit(i)}
+                >
+                  Edit
+                </Button>
+                <Button
+                  id="btn"
+                  variant="outlined"
+                  className="btn"
+                  onClick={() => handleDelete(i)}
+                >
+                  Delete
+                </Button>
+              </tr>
+            </table>
+
           </div>
         ))}
       </div>

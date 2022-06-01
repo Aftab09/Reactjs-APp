@@ -1,41 +1,57 @@
-.App {
-  /* text-align: center; */
-  background-color: rebeccapurple;
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  /* display: flex; */
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background-repeat: no-repeat;
+  /* background: forestgreen; */
+  background-size: 100%;
+  background-attachment: fixed;
   color: white;
+  /* background-color: black; */
+  /* background: transparent; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-image: url("https://media.istockphoto.com/photos/green-rainforest-fern-dew-closeup-picture-id452678795?k=20&m=452678795&s=612x612&w=0&h=ZgFURI4EhD6AA_mOLd5OOMNYR2nyNqhHehlXcuuTJ4w=");
+  font-family: "Roboto", sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+/* h1 {
+  color: white;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.card {
+  /* top: 50%; */
+  box-shadow: 0 0 5px 0;
+  background: inherit;
+  backdrop-filter: blur(10px);
+  /* margin: 100px; */
+  height: auto;
+  width: auto;
+  margin: 20px 30px 20px 30px;
+  padding: 50px;
+  /* text-align: center; */
+  position: absolute;
+  /* background-color: #66000000; */
+  background-color: rgba(255, 0, 0, 0);
+  border-radius: 10px;
+  align-content: center;
+  display: flex;
+  background-image: "red.png";
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.card-body {
+  justify-content: center;
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+.card input {
+  /* text-align: center; */
+  /* justify-content: center; */
+  align-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  /* background-color: black; */
 }
 
 #InputName {
@@ -58,23 +74,23 @@
 
 .form {
   /* background-color: #dcdcdc; */
-  background-color: #DCDCDC;
-  width: 20rem;
+  /* background-color: #DCDCDC; */
+  /* width: 20rem; */
   /* height: 30rem; */
-  padding-left: 2rem;
+  /* padding-left: 2rem;
   display: inline-block;
   vertical-align: middle;
   border: 5px solid black ;
-  margin: 1rem;
-  padding: 2rem 2rem;
+  margin: 1rem; */
+  /* padding: 2rem 2rem; */
   /* text-align: center; */
   /* display: inline-block; */
-  margin-left: 10rem;
-  position: absolute;
+  /* margin-left: 10rem; */
+  /* position: absolute; */
 }
 
 .btn {
-  border: 5px solid white;
+  /* border: 5px solid white;
   font-weight: 800;
   background-color: #282c34;
   border-radius: 20px;
@@ -85,51 +101,114 @@
   text-align: center;
   width: 5rem;
   height: 55px;
-  margin-top: 1rem;
+  margin-top: 5rem;
   margin-left: 1rem;
+  padding-top: 2rem; */
+  /* margin-top: 2rem; */
+  
 }
-.btn:hover {
-  background-color: white;
-  color: black;
+#btn{
+  margin-top: 2rem;
+  width: 15.5rem;
+  font-size: 20px; 
+  margin-top: 5px;
+}
+
+
+/* #btn:hover {
+  /* background-color: white; */
+  /* color: black;
   border: 5px solid black;
-  font-weight: 800;
-}
+  font-weight: 800;  */
+  /* margin-top: 2rem;
+} */
+
 #output {
   height: 10rem;
   width: 20rem;
   background-color: #dcdcdc;
 }
+
 .Display-Users {
-  width: 22rem;
+  /* width: 22rem; */
   /* height: 10rem; */
   /* background-color: #dcdcdc; */
-  background-color: #DCDCDC;
-  text-align: center;
+  /* background-color: #dcdcdc; */
+  /* text-align: center; */
   /* margin-left: 29rem; */
-  display: inline-block;
+  /* display: inline-block;
   border: 5px solid black;
   padding: 2rem 2rem;
   margin: 2rem;
-  margin-left: 63rem;
+  margin-left: 100rem; */
   /* margin-bottom: 5rem; */
   /* padding: 2rem; */
   /* padding: 1rem 1rem; */
   /* vertical-align: left; */
-  position: absolute;
+  /* position: absolute; */
+  
 }
-.Display-Users li{
+
+.Display-Users {
+  box-shadow: 0 0 5px 0;
+  background: inherit;
+  backdrop-filter: blur(10px);
+  /* margin: 100px; */
+  height: auto;
+  width: auto;
+  margin: 20px 30px 20px 30px;
+  padding: 50px;
+  /* text-align: center; */
+  /* position: absolute; */
+  /* display: block; */
+  /* background-color: #66000000; */
+  background-color: rgba(255, 0, 0, 0);
+  border-radius: 10px;
+  align-content: center;
+  margin-left: 30rem;
+  display: inline-block;
+  /* display: flex; */
+  /* padding-right: 50rem; */
+  /* justify-content: center; */
+}
+
+/* .Display-Users li {
   list-style-type: none;
   text-align: center;
   /* text-decoration: dotted; */
-  font-weight: 600;
+  /* font-weight: 600;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 20px;
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */ */
+  /* font-size: 20px;
   font-display: auto;
   text-align: center;
   align-items: center;
   /* text-decoration: underline; */
-  display: flex;
+  /* display: flex; */
   /* text-decoration: underline; */
-  background-color: white;
+  /* background-color: white; */
+/* } */ */
+th{
+  /* display: column; */
+  /* width: 100%; */
 }
+table{
+  width: 100%;
+}
+table td{
+  width: 25%;
+
+}
+table th{
+  size: 25px;
+}
+table #name{
+  width: 25%;
+}
+table #email{
+  width: 25%;
+}
+table #address{
+  width: 20%;
+}
+
