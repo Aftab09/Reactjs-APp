@@ -250,6 +250,8 @@ table{
 }
 table td{
   width: 25%;
+  margin: auto;
+  padding: 0;
 }
 table tr{
   width: 25px;

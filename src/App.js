@@ -11,25 +11,22 @@ function App() {
   const [list, setList] = useState([]);
 
   const handleSubmit = (e) => {
-
-    const dupEmail = list.filter(list => list.email !== email).length
+    const dupEmail = list.filter((list) => list.email !== email).length;
     // console.log(dupEmail);
     // console.log(list.length);
 
     if (name !== "" && email !== "" && address !== "") {
-
-    if (dupEmail === list.length && email !== "") {
-      setList([...list, { name, email, address }]);
-      setName("");
-      setEmail("");
-      setAddress("");
-    }else{
-      alert(`${email}, Email is already Exist.`);
+      if (dupEmail === list.length && email !== "") {
+        setList([...list, { name, email, address }]);
+        setName("");
+        setEmail("");
+        setAddress("");
+      } else {
+        alert(`${email}, Email is already Taken.`);
+      }
+    } else {
+      alert("ALL FIELDS ARE REQUIRED!!!");
     }
-  
-  }else{
-    alert("Fill all fields");
-  }
 
     e.preventDefault();
     // console.log(name, email, address);
@@ -51,15 +48,15 @@ function App() {
   };
 
   // clear form data
-  const handleClear = () => {
-    setName("");
-    setEmail("");
-    setAddress("");
-  };
-
+  // const handleClear = () => {
+  //   setName("");
+  //   setEmail("");
+  //   setAddress("");
+  // };
 
   // Delete User
   const handleDelete = (index) => {
+    console.log(handleDelete);
     setList([...list.slice(0, index), ...list.slice(index + 1)]);
   };
 
@@ -71,13 +68,16 @@ function App() {
     setList([...list.slice(0, index), ...list.slice(index + 1)]);
   };
 
+  // update user data
 
   return (
     <div className="App">
       <Header />
       <div className="card card-body">
         <form onSubmit={handleSubmit}>
-          <h1><u>Add Users</u></h1>
+          <h1>
+            <u>Add Users</u>
+          </h1>
           <label>
             <b> Name </b>
           </label>
@@ -116,13 +116,13 @@ function App() {
           <Button type="submit" id="btn" className="btn" variant="outlined">
             Submit
           </Button>
-          <div>  
-         {/* <button onClick={showData}>Show</button> */}
-          </div>
+          <div>{/* <button onClick={showData}>Show</button> */}</div>
         </form>
       </div>
       <div className="Display-Users" id="users">
-        <h1><u>Display Users</u></h1>
+        <h1>
+          <u>Display Users</u>
+        </h1>
         <table border="1px solid black">
           <th id="name">Name</th>
           <th id="email">Email</th>
@@ -130,12 +130,11 @@ function App() {
           <th id="editDelete">Edit / Delete</th>
         </table>
 
+    localStorage.setItem("users", JSON.stringify(list));
         {list.map((item, i) => (
           <div>
-
             <table border="1px solid black">
-
-              <tr className="list-group-item">
+              <tr className="list-group-item" key={item.id}>
                 <td id="name">{item.name}</td>
                 <td id="email">{item.email}</td>
                 <td id="address">{item.address}</td>
@@ -157,7 +156,6 @@ function App() {
                 </Button>
               </tr>
             </table>
-
           </div>
         ))}
       </div>
