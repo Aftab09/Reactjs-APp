@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
+import Header from "./Header";
 // import { DataGrid } from '@mui/x-data-grid';
 
 function App() {
@@ -73,9 +74,10 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <div className="card card-body">
         <form onSubmit={handleSubmit}>
-          <h1>Add Users</h1>
+          <h1><u>Add Users</u></h1>
           <label>
             <b> Name </b>
           </label>
@@ -120,7 +122,7 @@ function App() {
         </form>
       </div>
       <div className="Display-Users" id="users">
-        <h1>Display Users</h1>
+        <h1><u>Display Users</u></h1>
         <table border="1px solid black">
           <th id="name">Name</th>
           <th id="email">Email</th>
@@ -138,7 +140,7 @@ function App() {
                 <td id="email">{item.email}</td>
                 <td id="address">{item.address}</td>
                 <Button
-                  id="btn"
+                  id="btn2"
                   variant="outlined"
                   className="btn"
                   onClick={() => handleEdit(i)}
@@ -146,7 +148,7 @@ function App() {
                   Edit
                 </Button>
                 <Button
-                  id="btn"
+                  id="btn2"
                   variant="outlined"
                   className="btn"
                   onClick={() => handleDelete(i)}
