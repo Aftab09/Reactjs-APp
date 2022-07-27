@@ -59,6 +59,10 @@ function App() {
     console.log(handleDelete);
     setList([...list.slice(0, index), ...list.slice(index + 1)]);
   };
+  
+  const handleUpdate = (i) => {
+    console.log(handleUpdate);
+  }
 
   // Edit User
   const handleEdit = (index) => {
